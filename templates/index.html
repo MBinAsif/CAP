@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Car Acceptability Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <h1>Car Acceptability Prediction</h1>
+    <form action="/predict" method="post">
+      <label for="buying_price">Buying Price:</label>
+      <select id="buying_price" name="buying_price">
+        <option value="vhigh">VHigh</option>
+        <option value="high">High</option>
+        <option value="med">Medium</option>
+        <option value="low">Low</option></select
+      ><br /><br />
+
+      <label for="maintenance_price">Maintenance Price:</label>
+      <select id="maintenance_price" name="maintenance_price">
+        <option value="vhigh">VHigh</option>
+        <option value="high">High</option>
+        <option value="med">Medium</option>
+        <option value="low">Low</option></select
+      ><br /><br />
+
+      <label for="no_of_doors">No. of Doors:</label>
+      <input type="text" id="no_of_doors" name="no_of_doors" /><br /><br />
+
+      <label for="person_capacity">Person Capacity:</label>
+      <select id="person_capacity" name="person_capacity">
+        <option value="2">2</option>
+        <option value="4">4</option>
+        <option value="more">More</option></select
+      ><br /><br />
+
+      <label for="size_of_luggage">Size of Luggage:</label>
+      <select id="size_of_luggage" name="size_of_luggage">
+        <option value="big">Big</option>
+        <option value="med">Medium</option>
+        <option value="small">Small</option></select
+      ><br /><br />
+
+      <label for="safety">Safety:</label>
+      <select id="safety" name="safety">
+        <option value="high">High</option>
+        <option value="med">Medium</option>
+        <option value="low">Low</option></select
+      ><br /><br />
+
+      <input type="submit" value="Predict" />
+    </form>
+  </body>
+</html>
